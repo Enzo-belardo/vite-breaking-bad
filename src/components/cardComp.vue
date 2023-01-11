@@ -1,18 +1,19 @@
 <script>
 export default{
-
+    name: 'cardComp',
+    
 }
 
 </script>
 
 <template>
-    <header>
+    <main>
         <div></div>
-    </header>
+    </main>
   
 </template>
 
-<style lang="scss" >
+<style lang="scss">
 @use '../styles/general' as * ;
 @use '../styles/partials/variables' as * ;
 
