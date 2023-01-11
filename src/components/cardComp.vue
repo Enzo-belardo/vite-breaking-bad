@@ -10,7 +10,6 @@ export default{
     <main>
         <div></div>
     </main>
-  
 </template>
 
 <style lang="scss">

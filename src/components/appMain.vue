@@ -19,7 +19,7 @@ export default{
         getCard() {
             axios.get(this.url)
             .then((response) => {
-                 console.log(response.data.data);
+                console.log(response.data.data);
                 this.store.cardList = response.data.data;
             })
             .catch(function (error) {
@@ -34,17 +34,26 @@ export default{
 </script>
 
 <template>
-    <main>
-       <div class="wrapper">
-          <article v-for="card in store.cardList" class="">
-             <div class="card">
-                <img :src="card.card_images[0].image_url" :alt="card.name">
-                <div class="description">
-                    <p>{{ card.name }}</p>
-                    <p>{{ card.archetype }}</p>
-                </div>
-             </div>
-          </article>
+    <main class="">
+        
+       <div class="container bg-light d-flex flex-wrap justify-content-center">
+          <div class="bg-dark text-light w-100 d-flex">
+              <h3 class="text-center p-2">
+                 found {{ store.cardList.length }} cards
+              </h3>
+          </div>
+
+           <div class="row row-cols-3 row-cols-md-5 g-3">
+               <div class="col-3 col-ms-5" v-for="card in store.cardList" >
+                  <div class="card">
+                     <img :src="card.card_images[0].image_url" :alt="card.name" class="img-fluid card-img-top">
+                     <div class="card-body">
+                         <h4>{{ card.name }}</h4>
+                         <p>{{ card.archetype }}</p>
+                     </div>
+                  </div>
+               </div>
+           </div>
        </div>
     </main>
 </template>
@@ -53,12 +62,15 @@ export default{
 @use '../styles/general' as * ;
 @use '../styles/partials/variables' as * ;
 
-.wrapper{
-    background-color: blue;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+main{
+    background-color: $main-color;
 
+}
+.card-body{
+    height: 100px;
+    h4{
+        font-size: 1rem;
+    }
+}
 
 </style>
