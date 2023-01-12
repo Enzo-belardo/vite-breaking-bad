@@ -7,7 +7,6 @@ export default{
     name: 'appMain',
     components : {
         CardComp,
-
     },
     data() {
         return {
@@ -17,14 +16,19 @@ export default{
     },
     methods: {
         getCard() {
-            axios.get(this.url)
+            axios.get(this.url,{
+                params:{
+    
+                }
+
+            })
             .then((response) => {
                 console.log(response.data.data);
                 this.store.cardList = response.data.data;
             })
            
             .catch(function (error) {
-                console.log(error);
+                console.warn(error);
             })
         }
     },
