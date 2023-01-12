@@ -27,7 +27,7 @@ export default{
 
 <style lang="scss" scoped>
 .card-body{
-    height:130px;
+    height:110px;
 }
 
 </style>

@@ -12,8 +12,7 @@ export default{
     data() {
         return {
             store,
-            url: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=15&offset=0',
-
+            url: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=10&offset=0',
         }
     },
     methods: {
@@ -23,6 +22,7 @@ export default{
                 console.log(response.data.data);
                 this.store.cardList = response.data.data;
             })
+           
             .catch(function (error) {
                 console.log(error);
             })
@@ -38,7 +38,7 @@ export default{
     <main>
        <div class="container mt-4">
           <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4">
-              <CardComp v-for="n in 15"/>
+              <CardComp/>
            </div>
        </div>
     </main>
