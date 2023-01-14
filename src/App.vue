@@ -1,9 +1,10 @@
 <script>
+import { store } from './store.js'
 import appHeader from './components/appHeader.vue';
 import appMain from './components/appMain.vue';
 
 export default {
-  name: 'AppYuGiOh',
+  name: 'AppVue',
   components: {
     appHeader,
     appMain,
