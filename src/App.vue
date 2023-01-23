@@ -1,5 +1,5 @@
 <script>
-import { store } from './store.js'
+import { store } from './store.js';
 import appHeader from './components/appHeader.vue';
 import appMain from './components/appMain.vue';
 

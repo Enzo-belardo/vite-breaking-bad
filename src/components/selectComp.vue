@@ -20,7 +20,7 @@ export default{
 <template>
     <div>
       <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"  v-model="selectOutput" @change="$emit('changeType', selectOutput)">
-       <option selected>Open this select menu</option>
+       <option selected>Seleziona i tipi </option>
        <option value="Alien">Alien</option>
        <option value="Laval">Laval</option>
        <option value="Vylon">Vylon</option>
@@ -30,9 +30,6 @@ export default{
      </select>
   </div>
 </template>
-
-
-
 <style lang="scss" >
 
 </style>
